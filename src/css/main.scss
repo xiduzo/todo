@@ -1,0 +1,128 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+* {
+  font-family: 'roboto';
+}
+
+body {
+  background: #F5F5F5;
+}
+
+.todo {
+  margin: 5em auto 0 auto;
+  width: 40vw;
+  background: #EF5350;
+  box-shadow:-20px -20px 0px 0px #E0E0E0;
+}
+
+.todo__header {
+  padding: 32px;
+  color: white;
+
+  h1,
+  p {
+    margin: 0;
+  }
+
+  h1 {
+    font-size: 3.25em;
+    font-weight: 300;
+  }
+
+  p {
+    font-weight: 300;
+    padding: 8px 0;
+    letter-spacing: 0.15em;
+    font-size: 0.8em;
+    border-bottom: 1px solid rgba(245, 245, 245, 0.5);
+  }
+}
+
+.todo__input {
+  display: flex;
+
+  input {
+    border: none;
+    padding: 16px 0 16px 32px;
+    font-size: 1.25em;
+    font-weight: 300;
+    flex-grow: 90;
+  }
+
+  button {
+    flex-grow: 10;
+    background: white;
+    border: none;
+    text-transform: uppercase;
+    padding: 0 32px;
+    font-weight: bold;
+  }
+}
+
+.todo__list {
+  margin: 0;
+  padding: 0;
+  color: white;
+
+  max-height: 60vh;
+  overflow-y: scroll;
+
+  .task__item {
+    margin: 4px 0;
+    font-size: 1.25em;
+    font-weight: 300;
+    list-style: none;
+    background: #EF9A9A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: color 300ms;
+
+    &--done {
+      text-decoration: line-through;
+      color: rgba(245, 245, 245, 0.5);
+    }
+
+    input {
+      // height: 20px;
+      margin: 18px 0;
+      background: none;
+      width: 5%;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .task__text {
+      padding: 16px 16px 16px 0;
+      width: 75%;
+      text-transform: capitalize;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+
+    button {
+      width: 20%;
+      background: none;
+      border: none;
+      height: 56px;
+      font-size: 1.25em;
+      font-weight: bold;
+      transition: all 300ms;
+      &:hover {
+        background: #E57373;
+      }
+    }
+
+    &:first-of-type {
+      margin: 16px 0 4px 0;
+    }
+  }
+}
+
+button {
+  &:hover {
+    cursor: pointer;
+  }
+}
